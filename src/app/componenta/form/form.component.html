@@ -1,0 +1,28 @@
+<form #bus="ngForm" (ngSubmit)="createBus(bus)">
+  <div>
+    <label for="line_number">line number:</label>
+    <input type="number" name="line_number" required [(ngModel)]="bus.line_number" #line_number="ngModel">
+  </div>
+  <br>
+  <div>
+    <label for="origin_station">origin station:</label>
+    <input type="text" name="origin_station" [(ngModel)]="bus.origin_station" #origin_station="ngModel">
+  </div>
+  <br>
+  <div>
+    <label for="terminating_station">terminating station:</label>
+    <input type="text" name="terminating_station" [(ngModel)]="bus.terminating_station" #terminating_station="ngModel">
+  </div>
+  <br>
+  <div>
+    <label for="on_time">on time:</label>
+    <input type="boolean" name="on_time" [(ngModel)]="bus.on_time" #on_time="ngModel">
+  </div>
+  <br>
+  <div>
+    <label for="price">price:</label>
+    <input type="number" name="price" [(ngModel)]="bus.price" #price="ngModel">
+  </div>
+  <br>
+  <button type="submit">Submit</button>
+</form>

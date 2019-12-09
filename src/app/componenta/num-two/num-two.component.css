@@ -1,0 +1,19 @@
+h1 {
+  background-color: rgb(101, 235, 172);
+  color: rgb(14, 68, 55);
+}
+
+* {
+  text-align: center;
+}
+
+p {
+  font-size: 20px;
+  text-decoration: underline;
+
+}
+
+img {
+  float: left;
+  width: 45px;
+}

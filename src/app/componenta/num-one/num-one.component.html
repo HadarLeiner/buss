@@ -1,0 +1,29 @@
+<button (click)="addBus()">הוסף קו</button>
+<app-form *ngIf="isNewBus" (close_form)="closeParent($event)"></app-form>
+
+<p>הרשימה המעודכנת לתחנה מספר {{line}}</p>
+
+<table *ngIf=" kavimExsis" (click)="clickTabel()">
+  <tr>
+    <th>מספר קו</th>
+    <th>תחנת מוצא</th>
+    <th>תחנת יעד</th>
+    <th>הקו הגיע בזמן</th>
+    <th>הנוסעים</th>
+    <th>מחיר</th>
+  </tr>
+  <tr *ngFor="let b of bussesArray">
+
+    <td>{{b.line_number}}</td>
+    <td>{{b.origin_station}}</td>
+    <td>{{b.terminating_station}}</td>
+    <td>{{b.on_time}}</td>
+    <td>
+      <ul *ngFor="let p of b.passengers">
+        <li>{{p.name}}</li>
+      </ul>
+    </td>
+    <td>{{b.price}}</td>
+  </tr>
+</table>
+<ng-content></ng-content>

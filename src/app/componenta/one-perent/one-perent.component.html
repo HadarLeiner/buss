@@ -1,0 +1,5 @@
+<input type="number" [(ngModel)]="station_num" />
+<h1 *ngIf="massege">{{massege}}</h1>
+<bus-list-below [line]="station_num" (click_Tabel)="clickTabelP($event)">
+  <h1>{{line}}</h1>
+</bus-list-below>
